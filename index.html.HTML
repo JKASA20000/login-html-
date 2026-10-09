@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Carnicería Chapala</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login {
+            background-color: white;
+            padding: 30px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        h2 {
+            text-align: center;    
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #125ca1;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <h2>Inicio de sesión</h2>
+        
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" placeholder="Ingresa tu usuario">
+        
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" placeholder="Ingresa tu contraseña">
+
+        <button onclick="iniciarSesion()">Ingresar</button>
+    </div>
+
+    <script>
+        function iniciarSesion() {
+            let usuario = document.getElementById("usuario").value;
+            let password = document.getElementById("password").value;
+
+            if (usuario === "" || password === "") {
+                alert("Por favor, ingresa tu usuario y contraseña.");
+                return;
+            }
+
+            alert("Bienvenido, " + usuario);
+        }
+    </script>
+</body>
+</html>
+
